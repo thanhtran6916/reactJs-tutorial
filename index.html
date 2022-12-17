@@ -1,0 +1,78 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // const array = [0, 1, 2, 3];
+      // function PostItem(index) {
+      //   return (
+      //     <div className="post-item">
+      //       <img
+      //         src="https://1.bp.blogspot.com/-OrLsC8v-hRQ/XadyJ-_yScI/AAAAAAAAJbc/Du34mK60ndw2cgG0BN59fUhMoL5dOD3VACLcBGAsYHQ/s1600/509454_0373.jpg"
+      //         alt="C#(.NET)"
+      //         width="300px"
+      //       />
+      //       <h2 className="post-titel">C#(.NET)</h2>
+      //       <p className="post-desc">Lập trình C#</p>
+      //       <p className="post-published">Một ngày trước</p>
+      //     </div>
+      //   );
+      // }
+
+      // const app = (
+      //   <div className="posts-list">
+      //     {array.map((element, index) => {
+      //       return <PostItem></PostItem>;
+      //     })}
+      //   </div>
+      // );
+
+      // const test = <h3>hello</h3>;
+
+      // ReactDOM.render(app, document.getElementById("root"));
+      // console.log(test);
+
+      function PostItem() {
+        return (
+          <div className="post-item">
+            <img
+              src="https://1.bp.blogspot.com/-OrLsC8v-hRQ/XadyJ-_yScI/AAAAAAAAJbc/Du34mK60ndw2cgG0BN59fUhMoL5dOD3VACLcBGAsYHQ/s1600/509454_0373.jpg"
+              alt="C#(.NET)"
+              width="300px"
+            />
+            <h2 className="post-titel">C#(.NET)</h2>
+            <p className="post-desc">Lập trình C#</p>
+            <p className="post-published">Một ngày trước</p>
+          </div>
+        );
+      }
+
+      function App() {
+        return (
+          <div id='wapper'>
+            <PostItem />
+            <PostItem />
+            <PostItem />  
+          </div>
+        )
+      }
+
+      ReactDOM.render(<App />, document.getElementById('root'))
+    </script>
+  </body>
+</html>
