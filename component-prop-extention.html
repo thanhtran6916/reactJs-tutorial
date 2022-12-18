@@ -19,19 +19,15 @@
 
     <script type="text/babel">
 
-        function Hello({ title }) {
-            return (
-                <h2>{ title }</h2>
-            )
+        function Component({ title }) {
+            return <h2>{title}</h2>
         }
 
         function App() {
-            return (
-                <Hello title="Hello word"></Hello>
-            )
+            return <Component title={true ? 'hello' : ''}></Component>
         }
 
-        ReactDOM.render(<App />, document.getElementById('root'));
+        ReactDOM.render(<App/>, document.getElementById('root'))
     </script>
 </body>
 </html>

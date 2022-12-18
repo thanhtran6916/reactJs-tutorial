@@ -18,20 +18,12 @@
     <div id="root"></div>
 
     <script type="text/babel">
-
-        function Hello({ title }) {
-            return (
-                <h2>{ title }</h2>
-            )
+        function App(...rest) {
+            console.log(rest)
+            return <h2></h2>
         }
 
-        function App() {
-            return (
-                <Hello title="Hello word"></Hello>
-            )
-        }
-
-        ReactDOM.render(<App />, document.getElementById('root'));
+        ReactDOM.render(<App>Hello word</App>, document.getElementById('root'))
     </script>
 </body>
 </html>
