@@ -109,11 +109,11 @@
         },
       ];
       
-      function CourseItem({data}) {
+      function CourseItem({data, onClick}) {
         return (
             <div className='course-item'>
                 <h2 
-                    onClick={() => alert(data.title)}
+                    onClick={() => onClick(data)}
                 >
                     {data.title}
                 </h2>
@@ -124,10 +124,15 @@
       }
 
       function App() {
+
+        const handleClick = (data) => {
+          console.log(data.title);
+        }
+
         return (
           <div id="wapper">
             {data.map(data => {
-                return <CourseItem data={data} />
+                return <CourseItem data={data} onClick={handleClick} />
             })}
           </div>
         );
